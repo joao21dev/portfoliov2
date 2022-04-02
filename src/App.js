@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./Navbar";
+import styled from "styled-components";
+import "./App.css";
+import About from "./About";
+import Projects from "./Projects";
+import Education from "./Education";
+import Experience from "./Experience";
+import Footer from "./Footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Navbar></Navbar>
+      <About />
+      <Projects />
+      <Education />
+      <Experience />
+      <Footer />
+    </Container>
   );
 }
+
+export const Container = styled.div`
+  background-color: #f9f6ee;
+  height: 100%;
+`;
 
 export default App;
